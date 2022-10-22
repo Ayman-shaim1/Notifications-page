@@ -41,6 +41,7 @@ p {
   background-color: var(--white-color);
   padding: 10px 20px;
   border-radius: 13px;
+  margin-top: 50px;
 }
 .notifications-card .notifications-card-header {
   display: flex;
@@ -200,5 +201,3 @@ p {
     width: 100%;
   }
 }
-
-
