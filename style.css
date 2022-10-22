@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
+/* Begin Variables */
+:root {
+  --red-color: hsl(1, 90%, 64%);
+  --blue-color: hsl(219, 85%, 26%);
+  --white-color: hsl(0, 0%, 100%);
+  --very-light-grayish-blue-color: hsl(210, 60%, 98%);
+  --light-grayish-blue1-color: hsl(211, 68%, 94%);
+  --light-grayish-blue2-color: hsl(205, 33%, 90%);
+  --grayish-blue-color: hsl(219, 14%, 63%);
+  --dark-grayish-blue-color: hsl(219, 12%, 42%);
+  --very-dark-blue-color: hsl(224, 21%, 14%);
+  --font-size-paragraph: 16px;
+}
+/* End Variables */
+
+/* Begin Global Rules */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  background-color: var(--very-light-grayish-blue-color);
+  height: 100vh;
+}
+
+p {
+  font-size: var(--font-size-paragraph);
+}
+/* End Global Rules */
+
+/* Begin Notifications Card */
+.notifications-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 580px;
+  background-color: var(--white-color);
+  padding: 10px 20px;
+  border-radius: 13px;
+}
+.notifications-card .notifications-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications-card .notifications-card-header small {
+  color: var(--dark-grayish-blue-color);
+  cursor: pointer;
+}
+.notifications-card .notifications-card-header p {
+  font-weight: bold;
+}
+.notifications-card .notifications-card-header p .notifications-number {
+  background-color: var(--blue-color);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  color: var(--white-color);
+}
+
+.notifications-card .notifications-card-content .notification-item {
+  display: flex;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv {
+  width: 85%;
+}
+.notifications-card .notifications-card-content .notification-item .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.notifications-card .notifications-card-content .notification-item.not-seen {
+  background-color: var(--light-grayish-blue1-color);
+}
+
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .not-seen {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--red-color);
+  display: none;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item.not-seen
+  .notification-item-iv
+  p
+  .not-seen {
+  display: inline-block;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p {
+  display: inline-block;
+  margin: 0;
+  font-size: 13px;
+  color: var(--dark-grayish-blue-color);
+  font-weight: 100;
+  position: relative;
+  width: 100%;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .user-name {
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 3px;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .important-thing.image {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -10%;
+  top: 10%;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .important-thing {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .important-thing.post {
+  color: var(--dark-grayish-blue-color);
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  p
+  .important-thing.group {
+  color: var(--blue-color);
+}
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  .notification-time {
+  color: var(--grayish-blue-color);
+}
+
+.notifications-card
+  .notifications-card-content
+  .notification-item
+  .notification-item-iv
+  .notification-message {
+  margin-top: 15px;
+  border: 1px solid var(--dark-grayish-blue-color);
+  padding: 15px 10px;
+  color: var(--dark-grayish-blue-color);
+  border-radius: 4px;
+}
+/* End Notifications Card */
+@media screen and (max-width: 600px) {
+  .notifications-card {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .notifications-card {
+    width: 100%;
+  }
+}
+
+
